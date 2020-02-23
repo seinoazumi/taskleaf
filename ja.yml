@@ -1,6 +1,16 @@
 ---
 ja:
   activerecord:
+    attributrs:
+      task:
+      user:
+        name: '名前'
+        email: 'メールアドレス'
+        admin: '管理者情報'
+        password: 'パスワード'
+        password_confirmaiton: 'パスワード（確認）'
+        created_at: '登録日時'
+        updated_at: '更新日時'
     errors:
       messages:
         record_invalid: 'バリデーションに失敗しました: %{errors}'
