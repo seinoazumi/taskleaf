@@ -3,6 +3,8 @@ ja:
   activerecord:
     attributes:
       task:
+        name: 名前
+        description: 詳細な内容
       user:
         name: '名前'
         email: 'メールアドレス'
