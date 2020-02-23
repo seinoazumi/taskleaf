@@ -1,7 +1,7 @@
 ---
 ja:
   activerecord:
-    attributrs:
+    attributes:
       task:
       user:
         name: '名前'
