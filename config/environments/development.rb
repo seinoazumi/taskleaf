@@ -33,7 +33,8 @@ Rails.application.configure do
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
-
+  config.action_mailer.deliverly_method = :stmp
+  config.action_mailer.stmp_settings = { adress: '127.0.0.1', port: 1025 }
   config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.

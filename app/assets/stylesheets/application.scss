@@ -1,1 +1,25 @@
 @import "bootstrap";
+
+.checked-icon{
+  fill: #59d4ff;
+  fill-opacity: 0;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes fadein {
+  from {
+    fill: #59d4ff;
+    fill-opacity: 0;
+    stroke: transparent;
+  }
+  to {
+    fill-opacity: 1;
+    stroke: #59d4ff;
+  }
+}  
+
+// .custom-up-arrow-icon:before {
+//   content: "●サンプル●";
+// }
