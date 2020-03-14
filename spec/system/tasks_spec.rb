@@ -44,5 +44,36 @@ describe "タスク管理機能", type: :system do
         it_behaves_like "ユーザーAが作成したタスクが表示される"
       end
     end
+
+    describe "新規作成機能" do
+      let(:login_user) { user_a }
+
+      before do
+        visit new_task_path
+        fill_in  'task[name]', with: task_name
+        click_button '確認'
+      end
+
+      context '新規作成画面で名前を入力した時' do
+        let(:task_name) { '新規作成のテストを書く' }
+
+        it '確認画面に遷移する' do
+          expect(current_path).to eq confirm_new_task_path
+        end
+
+        it '入力した名称のタスクが確認画面に表示されている' do
+          expect(page).to have_content('新規作成のテストを書く')
+        end
+      end
+
+      context '新規作成画面で名前を入力しなかった時' do
+        let(:task_name) { '' }
+
+        it '「名前のないタスク」という文字が挿入されている' do
+          expect(page).to have_content '名前のないタスク'
+        end
+      end
+
+    end
   end
 end
